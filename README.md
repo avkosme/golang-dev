@@ -1,5 +1,13 @@
 # Golang nvim development environment
 
+Golang dev env with nvim, vim plugins, code navigator, tmux
+
+## Docker Pull Command
+
+```
+$ docker pull avkosme/golang-dev
+```
+
 ## Quick start
 
 Create local volumes, run container in current directory:
