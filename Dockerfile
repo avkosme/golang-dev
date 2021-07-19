@@ -3,6 +3,8 @@ RUN apk add git curl gcc g++ bash make python3 python3-dev vim nodejs \
   npm the_silver_searcher fzf bat fd neovim neovim-doc tmux --update \
   py-pip
 RUN python3 -m pip install --user --upgrade pynvim jedi autopep8
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+RUN source $HOME/.poetry/env
 RUN npm install -g neovim
 RUN git clone https://github.com/avkosme/dotfiles.git ~/dotfiles
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
