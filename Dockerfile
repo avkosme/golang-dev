@@ -7,7 +7,7 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 
 # Poetry install
 ENV PATH "$HOME/.poetry/bin:$PATH"
-RUN echo export PATH='$HOME/.poetry/bin:$PATH' >> /etc/profile
+RUN echo export PATH="$HOME/.poetry/bin:$PATH" >> /etc/profile
 
 RUN npm install -g neovim
 RUN git clone https://github.com/avkosme/dotfiles.git ~/dotfiles
