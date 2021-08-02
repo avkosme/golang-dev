@@ -1,7 +1,7 @@
 FROM golang:1.16.5-alpine
 RUN apk add --no-cache git curl gcc g++ bash make python3 python3-dev vim nodejs \
   npm the_silver_searcher fzf bat fd neovim neovim-doc tmux \
-  py-pip strace
+  py-pip strace file
 RUN python3 -m pip install --user --upgrade pynvim jedi autopep8
 
 # Poetry install
