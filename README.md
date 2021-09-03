@@ -28,7 +28,7 @@ $ golang-dev
 Inside the running container:
 
 ```
-$ tmux -2
+$ tmux -2 -u
 
 $ nvim
 ```
