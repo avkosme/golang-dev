@@ -5,7 +5,7 @@ Golang dev env with nvim, vim plugins, code navigator, tmux
 ## Docker Pull Command
 
 ```
-$ docker pull avkosme/golang-dev
+$ docker pull ghcr.io/avkosme/golang-dev:latest
 ```
 
 ## Quick start
