@@ -18,7 +18,7 @@ $ docker volume create --driver local --name nvimdotfiles
 $ docker volume create --driver local --name gobin
 
 $ echo 'alias golang-dev="docker run -ti --rm -v nvimdotfiles:/root \
--v gobin:/go/bin -v `pwd`:/opt --workdir='/opt' ghcr.io/avkosme/golang-dev:latest sh"' >> ~/.bashrc
+-v gobin:/go/bin -v `pwd`:/opt --workdir='/opt' ghcr.io/avkosme/golang-dev:latest zsh"' >> ~/.bashrc
 
 $ source ~/.bashrc
 

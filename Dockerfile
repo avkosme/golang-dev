@@ -30,5 +30,12 @@ RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 RUN mkdir -p /root/.config/nvim
 RUN ln -s /root/dotfiles/files/vimrc /root/.config/nvim/init.vim | true
 RUN ln -s /root/dotfiles/files/coc-settings.json /root/.config/nvim/coc-settings.json | true
+
+## Zsh
+RUN apk add zsh
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## Aliases
 ADD docker/.tmux.conf /root/.tmux.conf
-ADD docker/.bashrc /root/.bashrc
+ADD docker/.zshrc /root/.zshrc
+
