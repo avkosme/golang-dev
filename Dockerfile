@@ -15,7 +15,7 @@ RUN apk add --no-cache \
 ## Python, other libraries
 RUN apk add --no-cache git curl gcc g++ bash make python3 python3-dev vim nodejs \
   npm the_silver_searcher fzf bat fd neovim neovim-doc tmux \
-  py-pip strace file ctags linux-headers
+  py-pip strace file ctags linux-headers ripgrep
 RUN python3 -m pip install --user --upgrade pynvim jedi autopep8
 
 # Poetry install
@@ -36,6 +36,7 @@ RUN apk add zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Aliases
-ADD docker/.tmux.conf /root/.tmux.conf
+#ADD docker/.tmux.conf /root/.tmux.conf
+ADD files/usr/share/workspace/.tmux.conf /root/.tmux.conf
 ADD docker/.zshrc /root/.zshrc
 
