@@ -31,6 +31,9 @@ RUN mkdir -p /root/.config/nvim
 RUN ln -s /root/dotfiles/files/vimrc /root/.config/nvim/init.vim | true
 RUN ln -s /root/dotfiles/files/coc-settings.json /root/.config/nvim/coc-settings.json | true
 
+RUN git clone https://github.com/magefile/mage /root/mage
+RUN cd /root/mage && go run bootstrap.go && cd
+
 ## Zsh
 RUN apk add zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
