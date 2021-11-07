@@ -1,4 +1,4 @@
-FROM golang:1.16.5-alpine
+FROM golang:1.17.3-alpine
 
 ## Locales issue
 ENV MUSL_LOCALE_DEPS cmake make musl-dev gcc gettext-dev libintl
